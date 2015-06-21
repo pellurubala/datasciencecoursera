@@ -5,8 +5,8 @@ The data description is obtained from the following site
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
 
 ## Variables
- *subject.id: The subject who performed the activity.
- *activity.description: The activity performed.
+ * subject.id: The subject who performed the activity.
+ * activity.description: The activity performed.
 
 Following variables contains the average of each variable with same name in the original dataset, for each activity and each subject. 
 subject 
