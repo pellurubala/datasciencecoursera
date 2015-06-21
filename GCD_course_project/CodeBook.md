@@ -4,6 +4,81 @@ This file describes the variables, the data, and any transformations or work tha
 The data description is obtained from the following site
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
 
+## Variables
+ subject.id: The subject who performed the activity.
+ activity.description: The activity performed.
+
+Following variables contains the average of each variable with same name in the original dataset, for each activity and each subject. 
+subject 
+activity
+ tBodyAccMeanX 
+ tBodyAccMeanY
+ tBodyAccMeanZ 
+ tBodyAccStdX 
+ tBodyAccStdY
+ tBodyAccStdZ 
+ tGravityAccMeanX 
+ tGravityAccMeanY 
+ tGravityAccMeanZ 
+ tGravityAccStdX 
+ tGravityAccStdY
+ tGravityAccStdZ 
+ tBodyAccJerkMeanX 
+ tBodyAccJerkMeanY 
+ tBodyAccJerkMeanZ
+ tBodyAccJerkStdX
+ tBodyAccJerkStdY 
+ tBodyAccJerkStdZ
+ tBodyGyroMeanX
+ tBodyGyroMeanY 
+ tBodyGyroMeanZ 
+ tBodyGyroStdX
+ tBodyGyroStdY 
+ tBodyGyroStdZ
+ tBodyGyroJerkMeanX
+ tBodyGyroJerkMeanY 
+ tBodyGyroJerkMeanZ
+ tBodyGyroJerkStdX 
+ tBodyGyroJerkStdY 
+ tBodyGyroJerkStdZ
+ tBodyAccMagMean 
+ tBodyAccMagStd 
+ tGravityAccMagMean 
+ tGravityAccMagStd 
+ tBodyAccJerkMagMean 
+ tBodyAccJerkMagStd
+ tBodyGyroMagMean
+ tBodyGyroMagStd 
+ tBodyGyroJerkMagMean 
+ tBodyGyroJerkMagStd 
+ fBodyAccMeanX 
+ fBodyAccMeanY 
+ fBodyAccMeanZ 
+ fBodyAccStdX
+ fBodyAccStdY 
+ fBodyAccStdZ 
+ fBodyAccJerkMeanX 
+ fBodyAccJerkMeanY 
+ fBodyAccJerkMeanZ 
+ fBodyAccJerkStdX 
+ fBodyAccJerkStdY 
+ fBodyAccJerkStdZ 
+ fBodyGyroMeanX 
+ fBodyGyroMeanY 
+ fBodyGyroMeanZ  
+ fBodyGyroStdX
+ fBodyGyroStdY 
+ fBodyGyroStdZ 
+ fBodyAccMagMean 
+ fBodyAccMagStd 
+ fBodyBodyAccJerkMagMean
+ fBodyBodyAccJerkMagStd 
+ fBodyBodyGyroMagMean
+ fBodyBodyGyroMagStd 
+ fBodyBodyGyroJerkMagMean
+ fBodyBodyGyroJerkMagStd
+ 
+ 
 The data for the project:  
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
