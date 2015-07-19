@@ -1,5 +1,6 @@
-fluidPage(  
-  titlePanel("Word Cloud : Obama's speech"),
+fluidPage( 
+  tags$a(href="help.html", "Application Help!"), 
+  titlePanel("Word Cloud : Obama's speech"),   
    img(src = "State-of-the-Union-590x359.png",height = 150, width = 290),
   sidebarLayout(
     sidebarPanel(

@@ -11,14 +11,12 @@ speech <<- list("2015" = "2015",
 				 "2010" = "2010",
 				  "2009" = "2009"	  )
 
-# Using "memoise" to automatically cache the results
-getTermMatrix <- memoise(function(book) {
-  # Careful not to let just any name slip in here; a
-  # malicious user could manipulate this value.
-  if (!(book %in% speech))
-    stop("Unknown book")
 
-  text <- readLines(sprintf("./%s.txt", book),
+getTermMatrix <- memoise(function(speech) {
+  if (!(speech %in% speech))
+    stop("Unknown speech")
+
+  text <- readLines(sprintf("./%s.txt", speech),
     encoding="UTF-8")
 
   myCorpus = Corpus(VectorSource(text))
