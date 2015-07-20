@@ -1,0 +1,77 @@
+---
+title       : Word Cloud Application
+subtitle    : President Barack Obamas State of the Union Address
+author      : BP65
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## 
+
+<q> 
+A <b> <font color="red">tag cloud (word cloud, or weighted list in visual design)</font></b> is a visual representation for text data, typically used to depict keyword metadata (tags) on websites, or to visualize free form text. Tags are usually single words, and the importance of each tag is shown with font size or color.</q>
+
+<style>
+.dark q {
+  color: green;
+}
+</style>
+
+
+--- .class #id 
+
+## A Look at my application
+  
+<img src=".\assets\img\web_site.jpg" alt="data visulization demo site" height="500" width="700" border="1"> <br>
+
+--- .middle 
+
+
+
+
+## Reading a csv file and generating word cloud in .Rmd file
+
+```{r ,echo=FALSE}
+ reviews <- read.csv ("reviews.csv", stringsAsFactors=FALSE)
+library(tm)
+ str(reviews)
+ review_text <- paste(reviews$text, collapse=" ")
+ review_source <- VectorSource(review_text)
+ corpus <- Corpus(review_source)
+ corpus <- tm_map(corpus, content_transformer(tolower))
+ dtm <- DocumentTermMatrix(corpus)
+ dtm2 <- as.matrix(dtm)
+ frequency <- colSums(dtm2)
+ frequency <- sort(frequency, decreasing=TRUE)
+ library(wordcloud)
+ words <- names(frequency) 
+ wordcloud(words[1:20], frequency[1:20])
+```
+--- .middle 
+
+
+##
+
+## Always the speech is about what?
+ Seven years <br>
+ One President<br>
+
+  <b> <font color="red"> jobs, work, people, economy</font></b><br>
+  
+  <table  style="width:50%">
+  <tr>
+    <td><img src=".\assets\img\jobs.jpg" alt="jobs"  height="200" width="450"> </td>
+   <td><img src=".\assets\img\people.jpg" alt="people"  height="200" width="450"> </td>
+    
+  </tr>
+  <tr>
+    <td><img src=".\assets\img\economy.GIF" alt="economy"  height="200" width="450">
+    <td><img src=".\assets\img\dollar.png" alt="dollar"  height="200" width="450">
+  </tr>
+</table>
+
